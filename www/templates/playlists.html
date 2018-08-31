@@ -1,9 +1,19 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Handy Man">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
+    
+	<div class="list">
+ <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model="search">
+  </label>
+    <a class="item item-avatar" ng-href="#/app/detials/{{p.$id}}" ng-repeat="p in arry|filter:search">
+      <img src="venkman.jpg">
+      <h2>{{p.name}}</h2>
+      <p>{{p.email}}</p>
+    </a>
+
+    
+
+</div>
   </ion-content>
 </ion-view>
